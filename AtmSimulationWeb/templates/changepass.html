@@ -1,0 +1,75 @@
+<!-- 修改密码界面 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CUMT银行ATM机系统</title>
+    <link rel="stylesheet" href="/AtmSimulationWeb/static/css/changepass.css">
+    <link rel="icon" href="/AtmSimulationWeb/static/images/logo.jpg">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <header class="label-style">CUMT银行ATM机系统</header>
+    <div id="background">
+        <!-- 标题栏 -->
+        <div class="index-title-region">
+            <span class="index-title">
+                中国矿业大学银行
+            </span>
+        </div>
+        <!-- 密码栏 -->
+        <div class="index-card-number-password-region">
+            <form>
+                <div>
+                    <label class="label-style" for="card-number">新的密码&nbsp;</label>
+                    <input type="password" class="card-number" name="card-number"><br>
+                </div>
+                <br>
+                <div>
+                    <label class="label-style" for="password">确认密码&nbsp;</label>
+                    <input type="password" class="password" name="password"><br>
+                </div>
+            </form>
+        </div>
+        <!-- 数字栏 -->
+        <br>
+        <div class="index-number-button-region">
+            <div class="index-number-button-line">
+                <button class="button-style label-style" value="1">1</button>
+                <button class="button-style label-style" value="2">2</button>
+                <button class="button-style label-style" value="3">3</button>
+                <button class="button-style label-style" value="退格">退格</button>
+            </div>
+            <div class="index-number-button-line">
+                <button class="button-style label-style" value="4">4</button>
+                <button class="button-style label-style" value="5">5</button>
+                <button class="button-style label-style" value="6">6</button>
+                <button class="button-style label-style" value="清空">清空</button>
+            </div>
+            <div class="index-number-button-line">
+                <button class="button-style label-style" value="7">7</button>
+                <button class="button-style label-style" value="8">8</button>
+                <button class="button-style label-style" value="9">9</button>
+                <a href="/AtmSimulationWeb/templates/function.html"><button class="button-style label-style"
+                        value="退卡">返回</button></a>
+            </div>
+            <div class="index-number-button-line">
+                <button class="button-style label-style" value=".">.</button>
+                <button class="button-style label-style" value="0">0</button>
+                <button class="button-style label-style" value="#">#</button>
+                <a href="/AtmSimulationWeb/templates/function.html"><button class="button-style label-style" id="fbtn"
+                        value="确认">确认</button></a>
+            </div>
+        </div>
+    </div>
+    <script type="module">
+        import { NewPass, selectInputRegion, sendCardPassToSever } from "/AtmSimulationWeb/static/js/changepass.js";
+        selectInputRegion();
+    </script>
+    <footer class="label-style">&copy cumt group</footer>
+</body>
+
+</html>
